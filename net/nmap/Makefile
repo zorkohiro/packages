@@ -87,7 +87,7 @@ CONFIGURE_ARGS += \
 	--with-libdnet=included \
 	--with-libpcre="$(STAGING_DIR)/usr" \
 	--with-libpcap="$(STAGING_DIR)/usr" \
-	--without-liblua \
+	--with-liblua=included \
 	--without-zenmap
 
 CONFIGURE_VARS += \

@@ -1,0 +1,31 @@
+Index: nmap-7.70/liblua/Makefile
+===================================================================
+--- nmap-7.70.orig/liblua/Makefile
++++ nmap-7.70/liblua/Makefile
+@@ -11,7 +11,7 @@ CFLAGS= -O2 -Wall -Wextra -DLUA_COMPAT_5
+ LDFLAGS= $(SYSLDFLAGS) $(MYLDFLAGS)
+ LIBS= -lm $(SYSLIBS) $(MYLIBS)
+ 
+-AR= ar rcu
++AR= ar
+ RANLIB= ranlib
+ RM= rm -f
+ 
+@@ -19,6 +19,8 @@ SYSCFLAGS=
+ SYSLDFLAGS=
+ SYSLIBS=
+ 
++ARFLAGS= rcu
++
+ MYCFLAGS=
+ MYLDFLAGS=
+ MYLIBS=
+@@ -56,7 +58,7 @@ o:	$(ALL_O)
+ a:	$(ALL_A)
+ 
+ $(LUA_A): $(BASE_O)
+-	$(AR) $@ $(BASE_O)
++	$(AR) $(ARFLAGS) $@ $(BASE_O)
+ 	$(RANLIB) $@
+ 
+ $(LUA_T): $(LUA_O) $(LUA_A)
