@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2006-2017 OpenWrt.org
+# Copyright (C) 2006-2019 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -87,7 +87,7 @@ CONFIGURE_ARGS += \
 	--with-libdnet=included \
 	--with-libpcre="$(STAGING_DIR)/usr" \
 	--with-libpcap="$(STAGING_DIR)/usr" \
-	--without-liblua \
+	--with-liblua=included \
 	--without-zenmap
 
 CONFIGURE_VARS += \
