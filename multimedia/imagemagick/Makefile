@@ -7,17 +7,18 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=imagemagick
 PKG_VERSION:=7.0.8
-PKG_REVISION:=49
+PKG_REVISION:=62
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Val Kulkov <val.kulkov@gmail.com>
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_REVISION).tar.gz
 PKG_SOURCE_URL:=http://github.com/ImageMagick/ImageMagick/archive/$(PKG_VERSION)-$(PKG_REVISION)
-PKG_HASH:=53f7963bbe81520e799e9e178a13757890ed43bc9faf2e86fae1cf58aea28575
+PKG_HASH:=ceae2596df95d0f9e42e405b9c1b6c369bf1f065fc74078e76a45c5cbde5260e
 PKG_BUILD_DIR:=$(BUILD_DIR)/ImageMagick-$(PKG_VERSION)-$(PKG_REVISION)
 
 PKG_LICENSE:=Apache-2.0
 PKG_LICENSE_FILES:=LICENSE
+PKG_CPE_ID:=cpe:/a:imagemagick:imagemagick
 
 PKG_USE_MIPS16:=0
 PKG_INSTALL:=1

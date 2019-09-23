@@ -2,24 +2,25 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=samba
-PKG_VERSION:=4.9.11
+PKG_VERSION:=4.9.13
 PKG_RELEASE:=1
 
-PKG_MAINTAINER:=Andy Walsh <andy.walsh44+github@gmail.com>
-PKG_LICENSE:=GPL-3.0-only
-PKG_LICENSE_FILES:=COPYING
-
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://ftp.heanet.ie/mirrors/ftp.samba.org/stable/ \
 		https://ftp.gwdg.de/pub/samba/stable/ \
 		https://ftp.riken.jp/net/samba/samba/stable/ \
 		http://www.nic.funet.fi/index/samba/pub/samba/stable/ \
 		http://samba.mirror.bit.nl/samba/ftp/stable/ \
 		https://download.samba.org/pub/samba/stable/
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_HASH:=bb736624d16f7369e395de2f15fec153b554f76f95864015b4ce1f2ae53e817b
+PKG_HASH:=ab18331e37766b13dbb07d1f115bda3d794917baf502d0ca2b2b8fff014b88f2
+
+PKG_MAINTAINER:=Andy Walsh <andy.walsh44+github@gmail.com>
+PKG_LICENSE:=GPL-3.0-only
+PKG_LICENSE_FILES:=COPYING
+PKG_CPE_ID:=cpe:/a:samba:samba
 
 # samba4=(asn1_compile) e2fsprogs=(compile_et) nfs-kernel-server=(rpcgen)
-HOST_BUILD_DEPENDS:=nfs-kernel-server/host e2fsprogs/host
+HOST_BUILD_DEPENDS:=python/host nfs-kernel-server/host e2fsprogs/host
 PKG_BUILD_DEPENDS:=samba4/host
 
 PKG_CONFIG_DEPENDS:= \
@@ -43,7 +44,7 @@ define Package/samba4/Default
   SECTION:=net
   CATEGORY:=Network
   TITLE:=Samba $(PKG_VERSION)
-  URL:=http://www.samba.org/
+  URL:=https://www.samba.org/
 endef
 
 define Package/samba4/Default/description
