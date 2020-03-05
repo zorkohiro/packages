@@ -9,12 +9,12 @@ include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/kernel.mk
 
 PKG_NAME:=libpfring
-PKG_VERSION:=7.4.0
+PKG_VERSION:=7.6.0-bg
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://codeload.github.com/ntop/PF_RING/tar.gz/$(PKG_VERSION)?
-PKG_HASH:=e1c9cb44d8072854220f493c56fa5cba99a6b8336883939dc18b3e30c2954b68
+PKG_SOURCE_URL:=https://codeload.github.com/nieuwejaar/PF_RING/tar.gz/$(PKG_VERSION)?
+PKG_HASH:=93d6fc6d434faaa33b51b86cb7512b4b963509822e8e38e2eba28085bd3872b0
 PKG_BUILD_DIR:=$(KERNEL_BUILD_DIR)/PF_RING-$(PKG_VERSION)
 
 PKG_MAINTAINER:=Banglang Huang <banglang.huang@foxmail.com>
